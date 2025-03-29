@@ -144,6 +144,7 @@ INSTRUCTIONS: Your purpose is to Analyze the database schema and generate the SQ
 - Optimize performance by minimizing unnecessary operations.
 - Use IN, ON, BY operators as per applicable conditions and subqueries.
 - If a query involves multiple steps or conditions, consider breaking it into subqueries or using CTEs.
+- Even if the question begins with ("What","how","when") assume that the questions is on the provided schema and generate query accordingly
 - SCHEMA-RESTRICTED QUERIES: Only use tables and columns that exist in the schema.
 - Return an error if a requested table or column is not found.
 - MONTH HANDLING: Use numerical values for months instead of LIKE %pattern%.
