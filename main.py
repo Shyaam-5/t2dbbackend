@@ -405,7 +405,10 @@ def generate_sql():
 
     # If no previous messages, start with system message
     if not messages:
+    # Save and reload to keep DB consistent and also pass it to OpenAI
         save_message(conversation_id, "system", SYSTEM_MESSAGE, "system")
+        messages = get_conversation1(conversation_id)
+
 
     # Append user query
     save_message(conversation_id, "user", user_query, "query")
